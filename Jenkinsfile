@@ -17,5 +17,11 @@ pipeline {
                 '''
             }
         }
+        stage('Testing') {
+            agent { label 'agent' }
+            steps {
+                sh './test.sh'
+            }
+        }
     }
 }
